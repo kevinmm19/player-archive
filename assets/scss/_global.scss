@@ -1,0 +1,76 @@
+html {
+    font-family:  'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 62.5%;
+    line-height: 1.4;
+    color: $otherText;
+    box-sizing: border-box;
+    background-color: $footer;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: $mainText;
+}
+h1 {
+    font-size: 3.6rem;
+}
+h2 {
+    font-size: 2.4rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+}
+p {
+    margin-bottom: 1.6rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+a {
+    color: $mainText;
+    text-decoration: none;
+}
+.btn-link {
+    position: relative;
+    display: inline-block;
+    padding: 1.5rem;
+    width: 20rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    background-color: $gradientMain;
+    background: linear-gradient(180deg, $gradientMain, $gradientAlt);
+    border-radius: 4rem;
+    &:hover,
+    &:focus {
+        background: none;
+        background-color: darken($success, 10%);
+    }
+}
+.center {
+    text-align: center;
+}
+.container {
+    margin: 0 auto;
+    text-align: center;
+    &--alt {
+      padding: 8rem 2rem;
+    }
+}
+.padding {
+    padding: 2rem;
+    @include respond-to($tablet) {
+        padding: 4rem;
+    }
+}
